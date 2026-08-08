@@ -1,0 +1,83 @@
+C1. We Be Flipping (Easy Version)
+
+This is the easy version of the problem. The difference between the versions is that in this version, you must minimise the sum. You can hack only if you solved all versions of this problem.
+
+You have an array a
+ of length n
+ which consists of non-zero (but possibly negative) integers. You will perform the following operation at most n
+ times (possibly none):
+
+select an index i
+ (1≤i≤n
+) such that ai>0
+then for each j
+ where 1≤j≤i
+ do aj:=−aj
+.
+Output a valid sequence of operations of length at most n
+ which minimises
+ the sum of a
+ at the end.
+
+Input
+Each test contains multiple test cases. The first line contains the number of test cases t
+ (1≤t≤104
+). The description of the test cases follows.
+
+The first line of each testcase contains an integer n
+ (2≤n≤2⋅105
+) — the length of the array a
+.
+
+The second line of each testcase contains n
+ integers a1,a2,…,an
+ (−109≤ai≤109,ai≠0
+).
+
+It is guaranteed that the sum of n
+ over all test cases does not exceed 2⋅105
+.
+
+Output
+For each testcase, output a single integer k
+ (0≤k≤n
+) — the number of operations you will perform.
+
+Now output k
+ integers b1,…,bk
+ where bi
+ is the index you perform the i
+th operation on.
+
+After performing the operations, the sum of a
+ should be minimal.
+
+Example
+
+Input
+3
+5
+-1 -2 -3 -5 -4
+5
+-1 -2 3 -5 4
+4
+5 7 10 19
+
+Output
+0
+
+4
+3 5 4 2
+1
+4
+Note
+In the first testcase, the sum is already minimised. So no operations are required.
+
+In the second testcase, the operations are made as follows:
+
+[−1,−2,3,−5,4]−→−i=3[1,2,−3,−5,4]
+[1,2,−3,−5,4]−→−i=5[−1,−2,3,5,−4]
+[−1,−2,3,5,−4]−→−i=4[1,2,−3,−5,−4]
+[1,2,−3,−5,−4]−→−i=2[−1,−2,−3,−5,−4]
+This has a sum of −15
+, which is the minimum possible.
