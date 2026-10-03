@@ -1,0 +1,84 @@
+A. K Is Important
+
+You are given an array a
+ consisting of n
+ positive integers, as well as an integer parameter k
+.
+
+While the array has at least k
+ elements, you need to perform one of the following two types of operations on a
+:
+
+Remove ak
+ and add its value to your score, or
+Remove am−k+1
+ and add its value to your score, where m
+ is the length of a
+ before this operation.
+After removing an element, the remaining elements keep their relative order.
+
+Your task is to determine the maximum possible score that can be obtained.
+
+Input
+Each test contains multiple test cases. The first line contains the number of test cases t
+ (1≤t≤104
+). The description of the test cases follows.
+
+The first line of each test case contains two integers n
+ and k
+ (1≤k≤n≤105
+) — the length of a
+ and the parameter.
+
+The second line contains n
+ integers ai
+ (1≤ai≤109
+) — the elements of a
+.
+
+It is guaranteed that the sum of n
+ over all test cases does not exceed 105
+.
+
+Output
+For each test case, output a single integer — the maximum score that can be obtained.
+
+Example
+
+Input
+4
+4 2
+1 2 3 4
+4 4
+3 4 1 2
+1 1
+1
+6 3
+1 4 8 2 6 3
+
+Output
+9
+3
+1
+19
+
+Note
+In the first test case, we can first remove a3=3
+. The score becomes 3
+, and the array becomes [1,2,4]
+. Then we remove a2=2
+, so the score becomes 5
+, and the array becomes [1,4]
+. Finally, we remove a2=4
+, and the score becomes 9
+. Now the length of the array is less than k=2
+, so no more operations can be performed. It can be proven that the maximum score is 9
+.
+
+In the second test case, we can only perform one operation, either removing a1=3
+ or a4=2
+. Obviously, it is better to remove a1=3
+ to get a score of 3
+.
+
+
